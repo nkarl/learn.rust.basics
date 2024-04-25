@@ -1,6 +1,6 @@
-use std::io::{self, BufRead, Write};
+use std::io::{self, Write};
 
-pub fn view_vec(a: &Vec<i32>) {
+fn view_vec(a: &Vec<i32>) {
     let mut i = 0;
     for x in a {
         print!("{}:{}, ", i, x);
@@ -9,7 +9,7 @@ pub fn view_vec(a: &Vec<i32>) {
     println!();
 }
 
-pub fn read_line(index: &mut String) {
+fn read_line(index: &mut String) {
     io::stdin().read_line(index).expect("Failed to read line");
 }
 
